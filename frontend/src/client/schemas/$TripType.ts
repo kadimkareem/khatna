@@ -2,10 +2,6 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-
-export type TripCreate = {
-    curren_location: string;
-    distenation: string;
-    route_id: number;
-    driver_id: number;
-};
+export const $TripType = {
+    type: 'Enum',
+} as const;

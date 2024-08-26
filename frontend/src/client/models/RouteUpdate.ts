@@ -3,9 +3,9 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import type { TripOut } from './TripOut';
-
-export type TripsOUt = {
-    data: Array<TripOut>;
-    count: number;
+export type RouteUpdate = {
+    start?: (number | null);
+    end?: (number | null);
+    path?: (Array<string> | null);
 };
+

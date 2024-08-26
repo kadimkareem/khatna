@@ -3,9 +3,4 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export type TripUpdate = {
-    curren_location: string;
-    distenation: string;
-    route_id: number;
-    driver_id: number;
-};
+export type TripStatus = 'start' | 'in_way' | 'arrive_you' | 'cancelled' | 'arrived_destination';

@@ -2,11 +2,13 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { TripCreate } from '../models/trip/TripCreate';
-import type { TripOut } from '../models/trip/TripOut';
-import type { TripsOUt } from '../models/trip/TripsOut';
-import type { TripUpdate } from '../models/trip/TripUpdate';
-import type { Message } from '../models//Message';
+import type { Message } from '../models/Message';
+import type { Trip } from '../models/Trip';
+import type { TripCreate_Input } from '../models/TripCreate_Input';
+import type { TripCreate_Output } from '../models/TripCreate_Output';
+import type { TripsList } from '../models/TripsList';
+import type { TripUpdate_Input } from '../models/TripUpdate_Input';
+import type { TripUpdate_Output } from '../models/TripUpdate_Output';
 
 import type { CancelablePromise } from '../core/CancelablePromise';
 import { OpenAPI } from '../core/OpenAPI';
@@ -16,17 +18,17 @@ export class TripsService {
 
     /**
      * Read Trips
-     * Retrieve trips.
-     * @returns TripsOut Successful Response
+     * Retrieve trips. only admin can fetch all
+     * @returns TripsList Successful Response
      * @throws ApiError
      */
-    public static readTrips({
+    public static tripsReadTrips({
         skip,
         limit = 100,
     }: {
         skip?: number,
         limit?: number,
-    }): CancelablePromise<TripsOUt> {
+    }): CancelablePromise<TripsList> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/api/v1/trips/',
@@ -43,14 +45,14 @@ export class TripsService {
     /**
      * Create Trip
      * Create new trip.
-     * @returns TripOut Successful Response
+     * @returns TripCreate_Output Successful Response
      * @throws ApiError
      */
-    public static createTrip({
+    public static tripsCreateTrip({
         requestBody,
     }: {
-        requestBody: TripCreate,
-    }): CancelablePromise<TripOut> {
+        requestBody: TripCreate_Input,
+    }): CancelablePromise<TripCreate_Output> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/v1/trips/',
@@ -65,14 +67,14 @@ export class TripsService {
     /**
      * Read Trip
      * Get trip by ID.
-     * @returns TripOut Successful Response
+     * @returns Trip Successful Response
      * @throws ApiError
      */
-    public static readTrip({
+    public static tripsReadTrip({
         id,
     }: {
         id: number,
-    }): CancelablePromise<TripOut> {
+    }): CancelablePromise<Trip> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/api/v1/trips/{id}',
@@ -88,16 +90,16 @@ export class TripsService {
     /**
      * Update Trip
      * Update an trip.
-     * @returns TripOut Successful Response
+     * @returns TripUpdate_Output Successful Response
      * @throws ApiError
      */
-    public static updateTrip({
+    public static tripsUpdateTrip({
         id,
         requestBody,
     }: {
         id: number,
-        requestBody: TripUpdate,
-    }): CancelablePromise<TripOut> {
+        requestBody: TripUpdate_Input,
+    }): CancelablePromise<TripUpdate_Output> {
         return __request(OpenAPI, {
             method: 'PUT',
             url: '/api/v1/trips/{id}',
@@ -118,7 +120,7 @@ export class TripsService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static deleteTrip({
+    public static tripsDeleteTrip({
         id,
     }: {
         id: number,
