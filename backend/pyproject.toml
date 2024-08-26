@@ -28,6 +28,7 @@ pydantic-settings = "^2.2.1"
 sentry-sdk = {extras = ["fastapi"], version = "^1.40.6"}
 fastcrud = "^0.13.1"
 factory-boy = "^3.3.0"
+fastapi-admin = "^1.0.4"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.3"
