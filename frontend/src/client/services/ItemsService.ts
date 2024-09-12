@@ -20,7 +20,7 @@ export class ItemsService {
      * @returns ItemsOut Successful Response
      * @throws ApiError
      */
-    public static itemsReadItems({
+    public static readItems({
         skip,
         limit = 100,
     }: {
@@ -46,7 +46,7 @@ export class ItemsService {
      * @returns ItemOut Successful Response
      * @throws ApiError
      */
-    public static itemsCreateItem({
+    public static createItem({
         requestBody,
     }: {
         requestBody: ItemCreate,
@@ -68,7 +68,7 @@ export class ItemsService {
      * @returns ItemOut Successful Response
      * @throws ApiError
      */
-    public static itemsReadItem({
+    public static readItem({
         id,
     }: {
         id: number,
@@ -91,7 +91,7 @@ export class ItemsService {
      * @returns ItemOut Successful Response
      * @throws ApiError
      */
-    public static itemsUpdateItem({
+    public static updateItem({
         id,
         requestBody,
     }: {
@@ -118,7 +118,7 @@ export class ItemsService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static itemsDeleteItem({
+    public static deleteItem({
         id,
     }: {
         id: number,

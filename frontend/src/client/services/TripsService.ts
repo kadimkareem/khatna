@@ -22,7 +22,7 @@ export class TripsService {
      * @returns TripsList Successful Response
      * @throws ApiError
      */
-    public static tripsReadTrips({
+    public static readTrips({
         skip,
         limit = 100,
     }: {
@@ -48,7 +48,7 @@ export class TripsService {
      * @returns TripCreate_Output Successful Response
      * @throws ApiError
      */
-    public static tripsCreateTrip({
+    public static createTrip({
         requestBody,
     }: {
         requestBody: TripCreate_Input,
@@ -70,7 +70,7 @@ export class TripsService {
      * @returns Trip Successful Response
      * @throws ApiError
      */
-    public static tripsReadTrip({
+    public static readTrip({
         id,
     }: {
         id: number,
@@ -93,7 +93,7 @@ export class TripsService {
      * @returns TripUpdate_Output Successful Response
      * @throws ApiError
      */
-    public static tripsUpdateTrip({
+    public static updateTrip({
         id,
         requestBody,
     }: {
@@ -120,7 +120,7 @@ export class TripsService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static tripsDeleteTrip({
+    public static deleteTrip({
         id,
     }: {
         id: number,

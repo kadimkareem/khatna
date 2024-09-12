@@ -23,7 +23,7 @@ export class UsersService {
      * @returns UsersOut Successful Response
      * @throws ApiError
      */
-    public static usersReadUsers({
+    public static readUsers({
         skip,
         limit = 100,
     }: {
@@ -49,7 +49,7 @@ export class UsersService {
      * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public static usersCreateUser({
+    public static createUser({
         requestBody,
     }: {
         requestBody: UserCreate,
@@ -71,7 +71,7 @@ export class UsersService {
      * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public static usersReadUserMe(): CancelablePromise<UserOut> {
+    public static readUserMe(): CancelablePromise<UserOut> {
         return __request(OpenAPI, {
             method: 'GET',
             url: '/api/v1/users/me',
@@ -84,7 +84,7 @@ export class UsersService {
      * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public static usersUpdateUserMe({
+    public static updateUserMe({
         requestBody,
     }: {
         requestBody: UserUpdateMe,
@@ -106,7 +106,7 @@ export class UsersService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static usersUpdatePasswordMe({
+    public static updatePasswordMe({
         requestBody,
     }: {
         requestBody: UpdatePassword,
@@ -128,7 +128,7 @@ export class UsersService {
      * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public static usersCreateUserOpen({
+    public static createUserOpen({
         requestBody,
     }: {
         requestBody: UserCreateOpen,
@@ -150,7 +150,7 @@ export class UsersService {
      * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public static usersReadUserById({
+    public static readUserById({
         userId,
     }: {
         userId: number,
@@ -173,7 +173,7 @@ export class UsersService {
      * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public static usersUpdateUser({
+    public static updateUser({
         userId,
         requestBody,
     }: {
@@ -200,7 +200,7 @@ export class UsersService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static usersDeleteUser({
+    public static deleteUser({
         userId,
     }: {
         userId: number,

@@ -39,51 +39,52 @@ function Items() {
 
   return (
     <>
-      {isLoading ? (
-        // TODO: Add skeleton
-        <Flex justify="center" align="center" height="100vh" width="full">
-          <Spinner size="xl" color="ui.main" />
-        </Flex>
-      ) : (
-        items && (
-          <Container maxW="full">
-            <Heading
-              size="lg"
-              textAlign={{ base: 'center', md: 'left' }}
-              pt={12}
-            >
-              Items Management
-            </Heading>
-            <Navbar type={'Item'} />
-            <TableContainer>
-              <Table size={{ base: 'sm', md: 'md' }}>
-                <Thead>
-                  <Tr>
-                    <Th>ID</Th>
-                    <Th>Title</Th>
-                    <Th>Description</Th>
-                    <Th>Actions</Th>
-                  </Tr>
-                </Thead>
-                <Tbody>
-                  {items.data.map((item) => (
-                    <Tr key={item.id}>
-                      <Td>{item.id}</Td>
-                      <Td>{item.title}</Td>
-                      <Td color={!item.description ? 'gray.400' : 'inherit'}>
-                        {item.description || 'N/A'}
-                      </Td>
-                      <Td>
-                        <ActionsMenu type={'Item'} value={item} />
-                      </Td>
+      {
+        isLoading ? (
+          // TODO: Add skeleton
+          <Flex justify="center" align="center" height="100vh" width="full">
+            <Spinner size="xl" color="ui.main" />
+          </Flex>
+        ) : (
+          items && (
+            <Container maxW="full">
+              <Heading
+                size="lg"
+                textAlign={{ base: 'center', md: 'left' }}
+                pt={12}
+              >
+                Items Management
+              </Heading>
+              <Navbar type={'Item'} />
+              <TableContainer>
+                <Table size={{ base: 'sm', md: 'md' }}>
+                  <Thead>
+                    <Tr>
+                      <Th>ID</Th>
+                      <Th>Title</Th>
+                      <Th>Description</Th>
+                      <Th>Actions</Th>
                     </Tr>
-                  ))}
-                </Tbody>
-              </Table>
-            </TableContainer>
-          </Container>
-        )
-      )}
+                  </Thead>
+                  <Tbody>
+                    {items.data.map((item) => (
+                      <Tr key={item.id}>
+                        <Td>{item.id}</Td>
+                        <Td>{item.title}</Td>
+                        <Td color={!item.description ? 'gray.400' : 'inherit'}>
+                          {item.description || 'N/A'}
+                        </Td>
+                        <Td>
+                          <ActionsMenu type={'Item'} value={item} />
+                        </Td>
+                      </Tr>
+                    ))}
+                  </Tbody>
+                </Table>
+              </TableContainer>
+            </Container>
+          )
+        )}
     </>
   )
 }

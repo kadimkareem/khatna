@@ -20,7 +20,7 @@ export class RoutesService {
      * @returns RoutesOut Successful Response
      * @throws ApiError
      */
-    public static routesReadRoutes({
+    public static readRoutes({
         skip,
         limit = 100,
     }: {
@@ -46,7 +46,7 @@ export class RoutesService {
      * @returns RouteCreate Successful Response
      * @throws ApiError
      */
-    public static routesCreateRoute({
+    public static createRoute({
         requestBody,
     }: {
         requestBody: RouteCreate,
@@ -68,7 +68,7 @@ export class RoutesService {
      * @returns Route Successful Response
      * @throws ApiError
      */
-    public static routesReadRoute({
+    public static readRoute({
         id,
     }: {
         id: number,
@@ -91,7 +91,7 @@ export class RoutesService {
      * @returns RouteUpdate Successful Response
      * @throws ApiError
      */
-    public static routesUpdateRoute({
+    public static updateRoute({
         id,
         requestBody,
     }: {
@@ -118,7 +118,7 @@ export class RoutesService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static routesDeleteRoute({
+    public static deleteRoute({
         id,
     }: {
         id: number,
@@ -140,7 +140,7 @@ export class RoutesService {
      * @returns any Successful Response
      * @throws ApiError
      */
-    public static routesFindRoutesNearLocation({
+    public static findRoutesNearLocation({
         location,
     }: {
         location: string,

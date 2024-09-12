@@ -20,7 +20,7 @@ export class CarsService {
      * @returns CarsOut Successful Response
      * @throws ApiError
      */
-    public static carsReadCars({
+    public static readCars({
         skip,
         limit = 100,
     }: {
@@ -46,7 +46,7 @@ export class CarsService {
      * @returns CreateCar Successful Response
      * @throws ApiError
      */
-    public static carsCreateCar({
+    public static createCar({
         requestBody,
     }: {
         requestBody: CreateCar,
@@ -68,7 +68,7 @@ export class CarsService {
      * @returns CarOut Successful Response
      * @throws ApiError
      */
-    public static carsReadCar({
+    public static readCar({
         id,
     }: {
         id: number,
@@ -91,7 +91,7 @@ export class CarsService {
      * @returns UpdateCar Successful Response
      * @throws ApiError
      */
-    public static carsUpdateCar({
+    public static updateCar({
         id,
         requestBody,
     }: {
@@ -118,7 +118,7 @@ export class CarsService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static carsDeleteCar({
+    public static deleteCar({
         id,
     }: {
         id: number,

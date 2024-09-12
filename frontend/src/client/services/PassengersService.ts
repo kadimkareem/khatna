@@ -20,7 +20,7 @@ export class PassengersService {
      * @returns PassengerList Successful Response
      * @throws ApiError
      */
-    public static passengersReadPassengers({
+    public static readPassengers({
         skip,
         limit = 100,
     }: {
@@ -46,7 +46,7 @@ export class PassengersService {
      * @returns CreatePassenger Successful Response
      * @throws ApiError
      */
-    public static passengersCreatePassenger({
+    public static createPassenger({
         requestBody,
     }: {
         requestBody: CreatePassenger,
@@ -68,7 +68,7 @@ export class PassengersService {
      * @returns Passenger Successful Response
      * @throws ApiError
      */
-    public static passengersReadPassenger({
+    public static readPassenger({
         id,
     }: {
         id: number,
@@ -91,7 +91,7 @@ export class PassengersService {
      * @returns UpdatePassenger Successful Response
      * @throws ApiError
      */
-    public static passengersUpdatePassenger({
+    public static updatePassenger({
         id,
         requestBody,
     }: {
@@ -118,7 +118,7 @@ export class PassengersService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static passengersDeletePassenger({
+    public static deletePassenger({
         id,
     }: {
         id: number,

@@ -16,7 +16,7 @@ export class UtilsService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static utilsTestEmail({
+    public static testEmail({
         emailTo,
     }: {
         emailTo: string,

@@ -108,7 +108,7 @@ const AddUser: React.FC<AddUserProps> = ({ isOpen, onClose }) => {
               )}
             </FormControl>
             <FormControl mt={4} isInvalid={!!errors.full_name}>
-              <FormLabel htmlFor="name">Full name</FormLabel>
+              <FormLabel htmlFor="name">User Full name</FormLabel>
               <Input
                 id="name"
                 {...register('full_name')}

@@ -12,12 +12,13 @@ import { FiEdit, FiTrash } from 'react-icons/fi'
 
 import EditUser from '../Admin/EditUser'
 import EditItem from '../Items/EditItem'
+import EditCar from '../Cars/EditCar'  // Import the EditCar component
 import Delete from './DeleteAlert'
-import { ItemOut, UserOut } from '../../client'
+import { ItemOut, UserOut, CarOut } from '../../client'  // Add CarOut to imports
 
 interface ActionsMenuProps {
-  type: string
-  value: ItemOut | UserOut
+  type: 'User' | 'Item' | 'Car'  // Add 'Car' as an option
+  value: ItemOut | UserOut | CarOut  // Include CarOut in the value type
   disabled?: boolean
 }
 
@@ -49,15 +50,23 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({ type, value, disabled }) => {
             Delete {type}
           </MenuItem>
         </MenuList>
-        {type === 'User' ? (
+        {type === 'User' && (
           <EditUser
             user={value as UserOut}
             isOpen={editUserModal.isOpen}
             onClose={editUserModal.onClose}
           />
-        ) : (
+        )}
+        {type === 'Item' && (
           <EditItem
             item={value as ItemOut}
+            isOpen={editUserModal.isOpen}
+            onClose={editUserModal.onClose}
+          />
+        )}
+        {type === 'Car' && (
+          <EditCar  // Render EditCar component when the type is 'Car'
+            car={value as CarOut}
             isOpen={editUserModal.isOpen}
             onClose={editUserModal.onClose}
           />

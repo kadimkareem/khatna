@@ -20,7 +20,7 @@ export class LoginService {
      * @returns Token Successful Response
      * @throws ApiError
      */
-    public static loginLoginAccessToken({
+    public static loginAccessToken({
         formData,
     }: {
         formData: Body_login_login_access_token,
@@ -42,7 +42,7 @@ export class LoginService {
      * @returns UserOut Successful Response
      * @throws ApiError
      */
-    public static loginTestToken(): CancelablePromise<UserOut> {
+    public static testToken(): CancelablePromise<UserOut> {
         return __request(OpenAPI, {
             method: 'POST',
             url: '/api/v1/login/test-token',
@@ -55,7 +55,7 @@ export class LoginService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static loginRecoverPassword({
+    public static recoverPassword({
         email,
     }: {
         email: string,
@@ -78,7 +78,7 @@ export class LoginService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static loginResetPassword({
+    public static resetPassword({
         requestBody,
     }: {
         requestBody: NewPassword,
@@ -100,7 +100,7 @@ export class LoginService {
      * @returns string Successful Response
      * @throws ApiError
      */
-    public static loginRecoverPasswordHtmlContent({
+    public static recoverPasswordHtmlContent({
         email,
     }: {
         email: string,

@@ -20,7 +20,7 @@ export class DriversService {
      * @returns DriverList Successful Response
      * @throws ApiError
      */
-    public static driversReadDrivers({
+    public static readDrivers({
         skip,
         limit = 100,
     }: {
@@ -46,7 +46,7 @@ export class DriversService {
      * @returns DriverCreate Successful Response
      * @throws ApiError
      */
-    public static driversCreateDriver({
+    public static createDriver({
         requestBody,
     }: {
         requestBody: DriverCreate,
@@ -68,7 +68,7 @@ export class DriversService {
      * @returns Driver Successful Response
      * @throws ApiError
      */
-    public static driversReadDriver({
+    public static readDriver({
         id,
     }: {
         id: number,
@@ -91,7 +91,7 @@ export class DriversService {
      * @returns DriverUpdate Successful Response
      * @throws ApiError
      */
-    public static driversUpdateDriver({
+    public static updateDriver({
         id,
         requestBody,
     }: {
@@ -118,7 +118,7 @@ export class DriversService {
      * @returns Message Successful Response
      * @throws ApiError
      */
-    public static driversDeleteDriver({
+    public static deleteDriver({
         id,
     }: {
         id: number,
@@ -141,7 +141,7 @@ export class DriversService {
      * @returns any Successful Response
      * @throws ApiError
      */
-    public static driversUpdateDriverRating({
+    public static updateDriverRating({
         id,
         rating,
     }: {

@@ -1,0 +1,38 @@
+[
+  {
+    "exit": "Exit",
+    "@exit": {
+      "description": "Exit the application"
+    }
+  },
+  {
+    "no_display_name": "No display name",
+    "@no_display_name": {
+      "description": "Indicates no display name provided"
+    }
+  },
+  {
+    "failed_to_fetch_news": "Failed to fetch news",
+    "@failed_to_fetch_news": {
+      "description": "Error occurred while fetching news"
+    }
+  },
+  {
+    "access_courses_anywhere": "Access a variety of courses anytime, anywhere.",
+    "@access_courses_anywhere": {
+      "description": "Description of available courses"
+    }
+  },
+  {
+    "sign_in": "Sign In",
+    "@sign_in": {
+      "description": "Button to sign in"
+    }
+  },
+  {
+    "invalid_app_id": "Invalid App ID. Please check your Agora App ID.",
+    "@invalid_app_id": {
+      "description": "Error message for invalid App ID"
+    }
+  }
+]
